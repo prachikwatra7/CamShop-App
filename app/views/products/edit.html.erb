@@ -1,4 +1,4 @@
-<h1>Create a new product</h1>
+<h1>Edit existing product</h1>
 
 <% if @product.errors.any? %>
 <h2>The following errors prevented the product from being created</h2>
@@ -30,7 +30,6 @@
     <p>
         <%= f.submit %>
     </p>
-    
 <% end %>
 
 <%= link_to "Back to products listing", products_path %>
