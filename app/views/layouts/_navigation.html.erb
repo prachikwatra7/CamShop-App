@@ -14,12 +14,19 @@
       <%= link_to 'About Us', root_path, class: "w3-bar-item w3-button w3-hide-small w3-hover-white w3-text-white" %>
       <a href="#footer" class="w3-bar-item w3-button w3-hide-small w3-hover-white  w3-text-white">Contact Us</a>
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-button w3-hover-white" title="Notifications">Get Started <i class="fa fa-caret-down"></i></button>     
-            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-            </div>
-            
-              <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
-            
+          <button class="w3-button w3-hover-white" title="Notifications">Get Started <i class="fa fa-caret-down"></i></button>     
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <% if logged_in? %>
+              <%= link_to 'Log Out', logout_path, method: :delete, class: "w3-bar-item w3-button w3-hover-teal" %>
+            <% else %>
+              <%= link_to 'Log In', login_path, class: "w3-bar-item w3-button w3-hover-teal" %>
+              <%= link_to 'Sign Up', signup_path, class: "w3-bar-item w3-button w3-hover-teal" %>
+            <% end %>
+          </div> 
+        </div>
+         <% if logged_in?%>
+           
+         <% end %>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
         </div>
     </div>
-</div>

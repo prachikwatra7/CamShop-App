@@ -11,9 +11,14 @@
   <body>
     <%= render 'layouts/navigation' %>
     
-    <div class="w3-bar w3-border-teal w3-left-align w3-padding-16">
-      <%= render 'layouts/messages' %>
+    <div class="w3-container w3-padding-32 w3-theme-l5" id="contact">
+      <div class="w3-row">
+        <div class="w3-col m5">
+         <%= render 'layouts/messages' %>
+        </div>
+      </div>
     </div>
+    
     
     <%= yield %>
     <%= render 'layouts/footer' %>

@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
     def create
         #render plain: params[:product].inspect
         @product = Product.new(product_params)
+        @product.user = User.first
         if @product.save
             flash[:notice] = "Product was successfully created"
             redirect_to product_path(@product)
